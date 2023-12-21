@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+ /* import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
@@ -27,3 +27,5 @@ export class LoginComponent implements OnInit{
     console.log(this.formLogin.value);
   }
 }
+
+  */

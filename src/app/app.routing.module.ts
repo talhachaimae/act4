@@ -5,12 +5,12 @@ import {HomeComponent} from "./home/home.component";
 import {ProductsComponent} from "./products/products.component";
 import {NewProductsComponent} from "./new-products/new-products.component";
 import {EditProductComponent} from "./edit-product/edit-product.component";
-import {LoginComponent} from "./login/login.component";
-import {AdminTemplateComponent} from "./admin-template/admin-template.component";
+//import {LoginComponent} from "./login/login.component";
+//import {AdminTemplateComponent} from "./admin-template/admin-template.component";
 
 const routes: Routes = [
-  {path: "login" , component: LoginComponent},
-  {path: "admin", component: AdminTemplateComponent,},
+  //{path: "login" , component: LoginComponent},
+  //{path: "admin", component: AdminTemplateComponent,},
   { path: "products", component: ProductsComponent },
   { path: "newProducts", component: NewProductsComponent},
   { path: "editProducts/:id", component: EditProductComponent},

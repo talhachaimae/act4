@@ -21,7 +21,10 @@ export class ProductsComponent implements OnInit{
 
   ngOnInit() {
     this.searchProducts();
+
   }
+
+
    searchProducts(){
 
      this.productService.searchProducts(this.keyword,this.currentPage,this.pageSize).subscribe({
@@ -38,11 +41,10 @@ export class ProductsComponent implements OnInit{
            console.log(err);
          }
        })
-
-
-
-     //this.products=this.productService.getProducts();
+     // this.products=this.productService.getProducts();
    }
+
+
   handleCheckProduct(product: Product)  {
     this.productService.checkProduct(product)
       .subscribe({

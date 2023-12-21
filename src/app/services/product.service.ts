@@ -8,12 +8,20 @@ import {Product} from "../model/product.model";
 })
 export class ProductService {
 
-  constructor(private http :HttpClient){ }
-  public searchProducts(keyword:string="",page :number=1, size:number=4 ){
-    return this.http.get(`http://localhost:8889/products?name_like=${keyword}&_page=${page}&_limit=${size}`,{observe:'response'});
-
-
+  constructor(private http: HttpClient) {
   }
+
+  searchProducts(keyword:string="",page :number=1, size:number=4 ){
+  return this.http.get(`http://localhost:8889/products?name_like=${keyword}&_page=${page}&_limit=${size}`,{observe:'response'});
+  //return this.http.get(`http://localhost:8889/products/${product.id}` )
+}
+  /* public getProducts(keyword: string="", page:number=1, size:number=4){
+    return this.http.get(`http://localhost:8089/products?name_like=${keyword}&_page=${page}&_limit=${size}`, {observe: 'response'});
+  }
+
+   */
+
+
 
   public checkProduct(product : Product): Observable<Product>{
     return this.http.patch<Product>(`http://localhost:8889/products/${product.id}`,
